@@ -96,8 +96,6 @@ namespace AppCopaHAS.ViewModels
                 j.Posicao = this.Posicao; 
                 j.NumeroCamisa = this.NumeroCamisa;
 
-                Application.Current.MainPage.DisplayAlertAsync("A", "B", "Ok");
-
                 if (j.Id == 0)
                 {
                     Jogador jogadorRetorno = await _jogadorService.PostJogadorAsync(j);

@@ -8,6 +8,10 @@
             <Picker Title="---Seleção---" SelectedItem="{Binding SelecaoSelecionada}"
             ItemsSource="{Binding Selecoes}"
             ItemDisplayBinding="{Binding Pais}"/>
+            <Entry Text="{Binding Nome}" Placeholder="Nome" />
+            <Entry Text="{Binding Posicao}" Placeholder="Posicao"/>
+            <Entry Text="{Binding NumeroCamisa}"  Placeholder="NumeroCamisa" Keyboard="Numeric"/>
+
             <Button Text="Salvar" Command="{Binding SalvarCommand}"></Button>
         </VerticalStackLayout>
     </ScrollView>

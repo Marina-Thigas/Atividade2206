@@ -16,7 +16,7 @@ namespace AppCopaHAS.ViewModels
 
         public ObservableCollection<Selecao> Selecoes { get; set; }
         public Selecao SelecaoSelecionada { get; set; }
-        public ICommand SalvarCommand;
+        public ICommand SalvarCommand { get; set; }
         public CadastroJogadorViewModel()
         {
             _jogadorService = new JogadorService();
@@ -95,6 +95,8 @@ namespace AppCopaHAS.ViewModels
                 j.Nome = this.Nome;
                 j.Posicao = this.Posicao; 
                 j.NumeroCamisa = this.NumeroCamisa;
+
+                Application.Current.MainPage.DisplayAlertAsync("A", "B", "Ok");
 
                 if (j.Id == 0)
                 {
